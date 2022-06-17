@@ -1,5 +1,10 @@
+import { Link } from "react-router-dom";
 import "./Mode.css";
 
 export function Mode(props) {
-  return <div className="mode">{props.name}</div>;
+  return (
+    <Link className="mode" to={props.path}>
+      {props.name}
+    </Link>
+  );
 }

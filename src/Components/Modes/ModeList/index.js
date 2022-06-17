@@ -5,7 +5,7 @@ export function ModeList(props) {
   return (
     <div className="modes">
       {props.modes.map((mode) => {
-        return <Mode key={mode.name} name={mode.name}></Mode>;
+        return <Mode key={mode.name} name={mode.name} path={mode.path}></Mode>;
       })}
     </div>
   );
