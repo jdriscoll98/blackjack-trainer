@@ -1,14 +1,19 @@
 import "./App.css";
-import { CurvedText } from "./Components/CurvedText";
+import { CurvedText, ModeList } from "./Components";
 function App() {
+  const modes = [
+    {
+      name: "Basic Strategy",
+    },
+    {
+      name: "Card Counting",
+    },
+  ];
   return (
     <div className="App">
       <CurvedText text="Blackjack Trainer" />
       <h2>Choose your mode</h2>
-      <div className="modes">
-        <div className="mode">Basic Strategy</div>
-        <div className="mode">Card Counting</div>
-      </div>
+      <ModeList modes={modes} />
     </div>
   );
 }
