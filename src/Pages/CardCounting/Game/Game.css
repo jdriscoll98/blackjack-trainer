@@ -1,9 +1,0 @@
-.game-heading {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-.card-counting-heading {
-    flex: 1;
-}
