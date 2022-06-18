@@ -25,21 +25,69 @@ flex: 1
 
 }
 
-.dealer-1 {
+.dealer {
     grid-column: 2;
     grid-row: 1;
     position: relative;
+}
+
+.player-1 {
+    grid-column: 1;
+    grid-row: 2;
+    position: relative;
+}
+
+.player-2 {
+    grid-column: 2;
+    grid-row: 2;
+    position: relative;
+}
+
+.player-3 {
+    grid-column: 3;
+    grid-row: 2;
+    position: relative;
+}
+
+.player-4 {
+    grid-column: 1;
+    grid-row: 3;
+    position: relative;
+}
+.player-5 {
+    grid-column: 2;
+    grid-row: 3;
+    position: relative;
+}
+
+.player-6 {
+    grid-column: 3;
+    grid-row: 3;
+    position: relative;
+}
+
+.player-7 {
+    grid-column: 2;
+    grid-row: 4;
+    position: relative;
+}
+.card-1 {
     left: calc(50% - 15px);
     top: calc(50% - 30px);
 }
 
-.dealer-2 {
-    grid-column: 2;
-    grid-row: 1;
-    position: relative;
+.card-2 {
     left: calc(50% - 30px);
     top: calc(50% - 45px);
     z-index: 1;
+}
+
+.deck {
+    grid-column: 3;
+    grid-row: 1;
+    position: relative;
+    left: calc(50% - 25px);
+    top: calc(50% - 40px);
 }
 
 

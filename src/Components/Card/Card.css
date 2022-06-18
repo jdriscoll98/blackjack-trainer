@@ -21,3 +21,8 @@
 .card-number-bottom {
     align-self: flex-end;
 }
+
+.flipped {
+    background-color: red;
+    color: transparent;
+}

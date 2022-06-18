@@ -16,8 +16,23 @@ export function CardCountingGame() {
       </div>
       <div className="game-container">
         <div className="game-board">
-          <Card className="dealer-1" />
-          <Card className="dealer-2" />
+          <Card className="deck" flipped />
+          <Card className="dealer card-1" />
+          <Card className="dealer card-2" />
+          <Card className="player-1 card-1" />
+          <Card className="player-1 card-2" />
+          <Card className="player-2 card-1" />
+          <Card className="player-2 card-2" />
+          <Card className="player-3 card-1" />
+          <Card className="player-3 card-2" />
+          <Card className="player-4 card-1" />
+          <Card className="player-4 card-2" />
+          <Card className="player-5 card-1" />
+          <Card className="player-5 card-2" />
+          <Card className="player-6 card-1" />
+          <Card className="player-6 card-2" />
+          <Card className="player-7 card-1" />
+          <Card className="player-7 card-2" />
         </div>
       </div>
       <div className="game-input">
