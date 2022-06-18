@@ -4,11 +4,11 @@ export function Home() {
   const modes = [
     {
       name: "Basic Strategy",
-      path: "/basic-strategy-settings",
+      path: "/basic-strategy",
     },
     {
       name: "Card Counting",
-      path: "/card-counting-settings",
+      path: "/card-counting",
     },
   ];
 

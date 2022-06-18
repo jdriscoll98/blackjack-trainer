@@ -1,3 +1,7 @@
 import { Home } from "./Home";
-
-export { Home };
+import {
+  CardCountingHome,
+  CardCountingSettings,
+  CardCountingGame,
+} from "./CardCounting";
+export { Home, CardCountingHome, CardCountingSettings, CardCountingGame };
