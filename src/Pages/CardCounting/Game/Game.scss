@@ -92,43 +92,5 @@ flex: 1
 
 
 
-.game-heading {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-.card-counting-heading {
-    flex: 1;
-}
 
 
-
-
-.game-input {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    p {
-        text-align: center;
-    }
-
-    input { 
-        flex: 1;
-        font-size: 1.5em;
-        height: 50px;
-        max-width: 100px;
-        text-align: center;
-        font-weight: bold;
-        font-family: 'Roboto', sans-serif;
-        margin: 0 2rem;
-
-    }
-
-    button {
-       height: 50px;
-       width: 100px;
-    }
-}
