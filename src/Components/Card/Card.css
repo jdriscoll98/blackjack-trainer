@@ -22,7 +22,19 @@
     align-self: flex-end;
 }
 
+.card-color-red:not(.flipped) {
+    color: red;
+}
+
+.card-color-black::not(.flipped) {
+    color: black;
+}
+
 .flipped {
     background-color: red;
     color: transparent;
+}
+
+.hidden {
+    display: none;
 }
