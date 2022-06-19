@@ -6,7 +6,14 @@ export function CardCountingGameBoard(props) {
       case "pre-deal":
         return <PreDealState setState={props.setState} />;
       case "deal":
-        return <DealState />;
+        const deckCount = props.settings.deckCount ?? 1;
+        const tablePlayerCount = props.settings.tablePlayerCount ?? 1;
+        return (
+          <DealState
+            deckCount={deckCount}
+            tablePlayerCount={tablePlayerCount}
+          />
+        );
       default:
         throw new Error("Unknown game state");
     }

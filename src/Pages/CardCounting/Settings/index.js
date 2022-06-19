@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Slider } from "../../../Components/";
 import "./Settings.css";
-export function CardCountingSettings() {
+export function CardCountingSettings(props) {
   const settings = [
     {
       name: "Number of decks",
@@ -25,7 +25,18 @@ export function CardCountingSettings() {
       <h1>Card Counting Settings</h1>
       <div className="settings-container">
         {settings.map((setting) => (
-          <Slider key={setting.name} {...setting} />
+          <Slider
+            key={setting.name}
+            {...setting}
+            onChange={(e) => {
+              props.setSettings(() => {
+                return {
+                  ...props.settings,
+                  [setting.inputId]: parseInt(e.value),
+                };
+              });
+            }}
+          />
         ))}
       </div>
       <Link to="/card-counting/game">

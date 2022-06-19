@@ -17,7 +17,14 @@ export function Slider(props) {
           step={props.step ?? 1}
           value={value}
           className="slider"
-          onChange={(e) => setValue(e.target.value)}
+          onChange={(e) => {
+            setValue(e.target.value);
+            props.onChange({
+              name: props.name,
+              id: props.inputId,
+              value: e.target.value,
+            });
+          }}
           id={props.inputId ?? "myRange"}
         />
         <p>{props.max}</p>
