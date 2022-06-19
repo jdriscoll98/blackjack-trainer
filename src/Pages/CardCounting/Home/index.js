@@ -16,12 +16,13 @@ export function CardCountingHome() {
           <li>Any card on the table above a 9 is a -1</li>
         </ul>
         <p>
-          The idea is that a lower count favors the player, giving them better
+          The idea is that a higher count favors the player, giving them better
           odds at winning.
         </p>
         <p>
-          The game of blackjack moves quick so you need to practice this in
-          order to be great.
+          This game will deal out cards to you and you will have to submit your
+          guess at the count. Wait for the cards to be dealt, add them up and
+          submit your guess.
         </p>
         <strong>Are you ready?</strong>
         <Link to="/card-counting/settings">

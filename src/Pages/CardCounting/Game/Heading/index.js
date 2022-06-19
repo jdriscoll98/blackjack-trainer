@@ -5,7 +5,7 @@ export function CardCountingGameHeading(props) {
     if (props.total === 0) {
       return 0;
     }
-    return Math.round(props.correct / props.total) * 100;
+    return Math.trunc((props.correct / props.total) * 100);
   }
   return (
     <div className="game-heading">

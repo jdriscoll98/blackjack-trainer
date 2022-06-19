@@ -62,3 +62,13 @@ export function getSuitChar(suit) {
       throw new Error("Unexpected suit");
   }
 }
+
+export function getCountingValue(number) {
+  if (["A", "Q", "J", "K", "10"].includes(number)) {
+    return -1;
+  } else if (parseInt(number) <= 9 && parseInt(number) >= 7) {
+    return 0;
+  } else {
+    return 1;
+  }
+}

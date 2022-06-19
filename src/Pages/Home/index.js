@@ -3,10 +3,6 @@ import { CurvedText, ModeList } from "../../Components";
 export function Home() {
   const modes = [
     {
-      name: "Basic Strategy",
-      path: "/basic-strategy",
-    },
-    {
       name: "Card Counting",
       path: "/card-counting",
     },

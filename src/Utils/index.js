@@ -1,3 +1,9 @@
-import { createDeck, createDecks, shuffleDeck, getSuitChar } from "./deck";
+import {
+  createDeck,
+  createDecks,
+  shuffleDeck,
+  getSuitChar,
+  getCountingValue,
+} from "./deck";
 
-export { createDeck, createDecks, shuffleDeck, getSuitChar };
+export { createDeck, createDecks, shuffleDeck, getSuitChar, getCountingValue };
