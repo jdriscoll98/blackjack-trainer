@@ -10,6 +10,7 @@ export function Switch(props) {
         <input
           type="checkbox"
           value={value}
+          disabled={props.disabled}
           onChange={(e) => {
             setValue(e.target.value);
             props.onChange({
@@ -19,7 +20,9 @@ export function Switch(props) {
             });
           }}
         />
-        <span className="switch-slider round"></span>
+        <span
+          className={`switch-slider round ${props.disabled ? "disabled" : ""}`}
+        ></span>
       </label>
     </div>
   );

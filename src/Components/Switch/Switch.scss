@@ -66,3 +66,8 @@
   .switch-slider.round:before {
     border-radius: 50%;
   }
+
+  .switch-slider.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }

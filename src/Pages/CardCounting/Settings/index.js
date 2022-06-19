@@ -25,11 +25,13 @@ export function CardCountingSettings(props) {
       name: "Running Count",
       value: false,
       component: Switch,
+      disabled: true,
     },
     {
       name: "Total Count",
       value: false,
       component: Switch,
+      disabled: true,
     },
   ];
   return (
