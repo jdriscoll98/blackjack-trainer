@@ -1,22 +1,41 @@
 import { useEffect, useState } from "react";
 import { Card } from "../../../../Components";
-import { shuffleDeck, createDeck } from "../../../../Utils/";
+import { shuffleDeck, createDecks } from "../../../../Utils/";
 import "./States.scss";
 export function DealState(props) {
-  const [dealtCards, setDealtCards] = useState([]);
-  const [deck, setDeck] = useState(shuffleDeck(createDeck()));
+  const [dealerCards, setDealerCards] = useState([]);
+  const [playerCards, setPlayerCards] = useState([]);
+  const [deck, setDeck] = useState(shuffleDeck(createDecks(props.deckCount)));
 
+  // Deal cards to each player
   useEffect(() => {
-    console.log(deck);
-  }, [deck]);
+    const dealCards = [];
+    for (let i = 0; i < 2; i++) {
+      dealCards.push(deck.pop());
+    }
+    const playCards = [];
+    for (let i = 0; i < props.tablePlayerCount * 2; i++) {
+      playCards.push(deck.pop());
+    }
+    setDealerCards(dealCards);
+    setPlayerCards(playCards);
+  }, [props.tablePlayerCount, deck]);
 
   return (
     <>
       <Card className="deck" flipped></Card>
-      {dealtCards.map((card, index) => {
-        const player = index / 2;
-        const numberOfCard = index % 2;
-        console.log(player, numberOfCard);
+      {dealerCards.map((card, index) => (
+        <Card
+          className={`dealer card-${index + 1}`}
+          key={`dealer-${index + 1}`}
+          suit={card.suit}
+          number={card.number}
+        ></Card>
+      ))}
+      {playerCards.map((card, index) => {
+        const player = (index % props.tablePlayerCount) + 1;
+        const numberOfCard = index < props.tablePlayerCount ? "1" : "2";
+
         return (
           <Card
             number={card.number}

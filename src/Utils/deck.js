@@ -1,5 +1,5 @@
 const suits = ["spades", "hearts", "diamonds", "clubs"];
-const values = [
+const numbers = [
   "A",
   "2",
   "3",
@@ -14,11 +14,25 @@ const values = [
   "Q",
   "K",
 ];
-const deck = [];
+
+export function createDecks(numberOfDecks) {
+  const deck = [];
+  for (let i = 0; i < numberOfDecks; i++) {
+    for (let suit of suits) {
+      for (let number of numbers) {
+        deck.push({ suit, number });
+      }
+    }
+  }
+  return deck;
+}
+
 export function createDeck() {
+  const deck = [];
+
   for (let suit of suits) {
-    for (let value of values) {
-      deck.push({ suit, value });
+    for (let number of numbers) {
+      deck.push({ suit, number });
     }
   }
   return deck;
@@ -32,4 +46,19 @@ export function shuffleDeck(deck) {
     deck[rand2] = temp;
   }
   return deck;
+}
+
+export function getSuitChar(suit) {
+  switch (suit) {
+    case "spades":
+      return "♠";
+    case "hearts":
+      return "♥";
+    case "diamonds":
+      return "♦";
+    case "clubs":
+      return "♣";
+    default:
+      throw new Error("Unexpected suit");
+  }
 }
