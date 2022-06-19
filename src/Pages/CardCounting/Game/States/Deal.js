@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { Card } from "../../../../Components";
+import { shuffleDeck, createDeck } from "../../../../Utils/";
 import "./States.scss";
 export function DealState(props) {
   const [dealtCards, setDealtCards] = useState([]);
-  const [deck, setDeck] = useState([]);
+  const [deck, setDeck] = useState(shuffleDeck(createDeck()));
 
   useEffect(() => {
-    console.log("Dealing", props);
-  }, [props.settings]);
+    console.log(deck);
+  }, [deck]);
 
   return (
     <>
