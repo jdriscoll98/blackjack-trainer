@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Slider } from "../../../Components/";
+import { Slider, Switch } from "../../../Components/";
 import "./Settings.css";
 export function CardCountingSettings(props) {
   const settings = [
@@ -10,6 +10,7 @@ export function CardCountingSettings(props) {
       step: 1,
       value: 1,
       inputId: "deckCount",
+      component: Slider,
     },
     {
       name: "Number of Table Players",
@@ -18,6 +19,17 @@ export function CardCountingSettings(props) {
       step: 1,
       value: 1,
       inputId: "tablePlayerCount",
+      component: Slider,
+    },
+    {
+      name: "Running Count",
+      value: false,
+      component: Switch,
+    },
+    {
+      name: "Total Count",
+      value: false,
+      component: Switch,
     },
   ];
   return (
@@ -25,7 +37,7 @@ export function CardCountingSettings(props) {
       <h1>Card Counting Settings</h1>
       <div className="settings-container">
         {settings.map((setting) => (
-          <Slider
+          <setting.component
             key={setting.name}
             {...setting}
             onChange={(e) => {

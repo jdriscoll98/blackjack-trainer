@@ -8,7 +8,10 @@ import {
   CardCountingGame,
 } from "./Pages";
 function App() {
-  const [settings, setSettings] = useState({});
+  const [settings, setSettings] = useState({
+    deckCount: 1,
+    tablePlayerCount: 1,
+  });
   return (
     <div className="App">
       <BrowserRouter>
